@@ -1,0 +1,20 @@
+[user]
+    email = ssergeygoder@gmail.com.com
+    name = cosinequanon
+[core]
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
+[alias]
+    co = checkout
+    br = branch
+    st = status
+    di = diff
+    f = fetch
+    fo = fetch origin
+    pl = pull
+    plo = pull origin
+    ps = push
+    pso = push origin
+    psf = push --force
+    rb = rebase

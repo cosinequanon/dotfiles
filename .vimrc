@@ -290,3 +290,7 @@ inoremap jk <esc>
 " because I type : way more that ;
 nnoremap : ;
 nnoremap ; :
+
+au BufRead,BufNewFile *.pig set filetype=pig
+
+set visualbell

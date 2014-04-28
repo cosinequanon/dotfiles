@@ -38,6 +38,7 @@ alias g="git"
 alias histg="history | egrep"
 alias pprint="python -m json.tool"
 alias hotp="htop"
+alias vw="source /usr/local/bin/virtualenvwrapper.sh"
 
 # platform specific things
 UNAME=$(uname)

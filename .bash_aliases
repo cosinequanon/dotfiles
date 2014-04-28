@@ -6,8 +6,8 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # ls
-alias ls="ls --color=autoo"
-alias ks="ls --color=autoo"
+alias ls="ls --color=auto"
+alias ks="ls --color=auto"
 alias l="ls -l"
 alias la="ls -la"
 alias lh="ls -lh"

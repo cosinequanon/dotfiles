@@ -9,7 +9,7 @@ echo
 for full_file in $(find $(pwd) -type f -name ".*"); do
     file_name=$(echo $full_file | awk -F "/" '{print $NF}')
     echo "Symlinking $full_file to ~/$file_name"
-    rm ~/$file_name
+    rm -f ~/$file_name
     ln -s $full_file ~/$file_name 
 done
 

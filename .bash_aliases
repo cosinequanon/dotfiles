@@ -1,3 +1,28 @@
+# platform specific things
+UNAME=$(uname)
+MAC="Darwin"
+LINUX="Linux"
+
+if [ ${UNAME} = ${MAC} ]; then
+    # brew
+    alias br="brew"
+    alias brs="brew search"
+    alias bri="brew install"
+    alias brup="brew update && brew upgrade"
+
+    alias ls="ls -FG"
+    alias ks="ls -FG"
+elif [ ${UNAME} = ${LINUX} ]; then
+    # apt-get
+    alias acs="apt-cache search"
+    alias sag="sudo apt-get -y"
+    alias sagi="sudo apt-get install -y"
+    alias sagu="sudo apt-get update && sudo apt-get upgrade -y"
+
+    alias ls="ls --color=auto"
+    alias ks="ls --color=auto"
+fi
+
 # cd
 alias cd..="cd .."
 alias ..="cd .."
@@ -6,8 +31,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # ls
-alias ls="ls --color=auto"
-alias ks="ls --color=auto"
 alias l="ls -l"
 alias la="ls -la"
 alias lh="ls -lh"
@@ -39,20 +62,3 @@ alias histg="history | egrep"
 alias pprint="python -m json.tool"
 alias hotp="htop"
 alias vw="source /usr/local/bin/virtualenvwrapper.sh"
-
-# platform specific things
-UNAME=$(uname)
-MAC="Darwin"
-LINUX="Linux"
-
-if [ ${UNAME} = ${MAC} ]; then
-    # brew
-    alias br="brew"
-    alias brup="brew update && brew upgrade"
-elif [ ${UNAME} = ${LINUX} ]; then
-    # apt-get
-    alias acs="apt-cache search"
-    alias sag="sudo apt-get -y"
-    alias sagi="sudo apt-get install -y"
-    alias sagu="sudo apt-get update && sudo apt-get upgrade -y"
-fi

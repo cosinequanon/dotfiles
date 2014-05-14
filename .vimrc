@@ -268,13 +268,8 @@ map <leader>n :set number!<return>
 " switch a word's case after writing it
 imap <c-u> <esc>viw~ea
 
-" for quick arg writing: foo -> foo=foo
-imap <c-a> <esc>viwyea=<esc>pa
-
-" make Y consistent with D, C, etc.
+" make Y, V consistent with D, C, etc.
 nnoremap Y y$
-
-" make V consistent with D, C, etc.
 nnoremap V v$
 
 " make vv consistent with yy, dd
@@ -286,11 +281,5 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " quick escape
 inoremap jk <esc>
-
-" because I type : way more that ;
-nnoremap : ;
-nnoremap ; :
-
-au BufRead,BufNewFile *.pig set filetype=pig
 
 set visualbell

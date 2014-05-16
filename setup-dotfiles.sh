@@ -21,5 +21,5 @@ done
 cd - > /dev/null
 
 echo
-echo "Finished symlinks"
+echo "Finished copying"
 exit 0

@@ -35,8 +35,8 @@ ${color white}Kernel$color  $kernel ${alignr}${color white}Arch$color $machine
 ${color grey}CPU ${hr 2}$color
 ${font Arial:bold:size=8}${color white}${execi 99999 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | cut -d" " -f2- | sed 's#Processor ##'}$font$color
 ${color white}Freq:$color ${execi 20 sensors |grep "Core0 Temp" | cut -d" " -f4}$font$color$alignr${freq_g 2}GHz ${color #c0ff3e}${execi 20 sensors |grep "Core1 Temp" | cut -d" " -f4}  $color${alignr}${color white}Processes:$color $running_processes/ $processes
-${cpugraph cpu1 25,120 000000 ffffff } ${cpugraph cpu2 25,120 000000 ffffff}
-${cpugraph cpu3 25,120 000000 ffffff } ${cpugraph cpu4 25,120 000000 ffffff}
+${cpugraph cpu1 25,120 000000 0000ff } ${cpugraph cpu2 25,120 000000 0000ff}
+${cpugraph cpu3 25,120 000000 0000ff } ${cpugraph cpu4 25,120 000000 0000ff }
 
 ${color grey}Top 5 Processes ${hr 2}$color
 ${color white}NAME               PID      CPU      MEM

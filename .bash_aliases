@@ -57,6 +57,9 @@ alias ev="vim ~/.vimrc"
 # git
 alias g="git"
 
+# vim
+alias v="vim"
+
 # etc
 alias histg="history | egrep"
 alias pprint="python -m json.tool"

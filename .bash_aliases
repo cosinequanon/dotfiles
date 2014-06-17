@@ -60,8 +60,11 @@ alias g="git"
 # vim
 alias v="vim"
 
+# python
+alias vw="source /usr/local/bin/virtualenvwrapper.sh"
+alias pipup="pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
+
 # etc
 alias histg="history | egrep"
 alias pprint="python -m json.tool"
 alias hotp="htop"
-alias vw="source /usr/local/bin/virtualenvwrapper.sh"

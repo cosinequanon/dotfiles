@@ -48,11 +48,13 @@ alias td="tmux detach"
 alias tn="tmux new"
 
 # edit stuff
-alias eb="vim ~/.bashrc"
+alias eb="$EDITOR ~/.bashrc"
 alias sb="source ~/.bashrc"
-alias eba="vim ~/.bash_aliases"
+alias eba="$EDITOR ~/.bash_aliases"
 alias sba="source ~/.bash_aliases"
-alias ev="vim ~/.vimrc"
+alias ebp="$EDITOR ~/.bash_profile"
+alias sbp="source ~/.bash_profile"
+alias ev="$EDITOR ~/.vimrc"
 
 # git
 alias g="git"
@@ -62,6 +64,7 @@ alias v="vim"
 
 # python
 alias vw="source /usr/local/bin/virtualenvwrapper.sh"
+alias vwd="source /usr/local/bin/virtualenvwrapper.sh && workon dev"
 alias pipup="pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
 
 # etc

@@ -283,3 +283,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 inoremap jk <esc>
 
 set visualbell
+
+" go to the end of the file and line
+" kind of like how gg goes the the top and begining of a line
+nnoremap GG G$
+vnoremap GG G$

@@ -8,6 +8,11 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+# custom for machine
+if [ -f ~/.bash_custom ]; then
+    source ~/.bash_custom
+fi
+
 # git completion
 if [ -z ~/.git-completeion.bash ]; then
     . ~/.git-completion.bash
@@ -17,4 +22,5 @@ fi
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
 
+mkdirdate() { mkdir $(date +'%Y-%m-%d')-"$1"; }
 

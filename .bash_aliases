@@ -67,7 +67,11 @@ alias vw="source /usr/local/bin/virtualenvwrapper.sh"
 alias vwd="source /usr/local/bin/virtualenvwrapper.sh && workon dev"
 alias pipup="pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
 
+# make aliases work with sudo
+alias sudo='sudo '
+
 # etc
 alias histg="history | egrep"
 alias pprint="python -m json.tool"
 alias hotp="htop"
+alias ssh-x='ssh -c arcfour,blowfish-cbc -XC'

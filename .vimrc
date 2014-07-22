@@ -288,3 +288,8 @@ set visualbell
 " kind of like how gg goes the the top and begining of a line
 nnoremap GG G$
 vnoremap GG G$
+
+" shortcut for R stuffs, might be better to only
+" have this enabled on *.R files
+" but we leave it for now
+iab ;; %.%

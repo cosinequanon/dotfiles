@@ -7,6 +7,9 @@
     excludesfile = ~/.gitignore
 [alias]
     cl = clone
+    cm = commit
+    cmm = commit -m
+    cma = commit --amend
     co = checkout
     br = branch
     st = status

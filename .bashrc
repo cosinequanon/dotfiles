@@ -12,24 +12,32 @@ bind -m vi-insert "\C-l.":clear-screen
 bind -m vi-insert "\C-a.":beginning-of-line
 bind -m vi-insert "\C-e.":end-of-line
 
+# set defaults
+export EDITOR="/usr/bin/vim"
+export PAGER="/usr/bin/less"
+
 # aliases
-if [ -f ~/.bash_aliases ]; then
+if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
 # custom for machine
-if [ -f ~/.bash_custom ]; then
+if [[ -f ~/.bash_custom ]]; then
     source ~/.bash_custom
 fi
 
 # git completion
-if [ -z ~/.git-completeion.bash ]; then
-    . ~/.git-completion.bash
+if [[ -f ~/.git-completion.bash && -f ~/.git-prompt.sh ]]; then
+    source ~/.git-completion.bash
+    source ~/.git-prompt.sh
     export PS1='[\w$(__git_ps1 "|%s")]\$ '
 fi
 
-export EDITOR="/usr/bin/vim"
-export PAGER="/usr/bin/less"
-
-mkdirdate() { mkdir $(date +'%Y-%m-%d')-"$1"; }
+# functions
+mkdirdate() { 
+    DIR_NAME=$(date +'%Y-%m-%d')-"$1"
+    mkdir ${DIR_NAME}
+    cd ${DIR_NAME}
+}
+mkdircd() { mkdir $1 && cd $1; }
 

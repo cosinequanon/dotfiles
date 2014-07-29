@@ -262,8 +262,9 @@ autocmd InsertLeave * :set relativenumber
 
 nnoremap <esc> :noh<return><esc>
 
-map <leader>x :x<return>
-map <leader>n :set number!<return>
+nnoremap <leader>x :x<return>
+nnoremap <leader>nn :set number!<return>
+nnoremap <leader>mn :set relativenumber!<return>
 
 " switch a word's case after writing it
 imap <c-u> <esc>viw~ea
@@ -278,9 +279,6 @@ noremap vv V
 "edit + source vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-
-" quick escape
-inoremap jk <esc>
 
 set visualbell
 

@@ -18,6 +18,7 @@
     fo = fetch origin
     pl = pull
     plo = pull origin
+    plr = pull --rebase
     ps = push
     pso = push origin
     psf = push --force

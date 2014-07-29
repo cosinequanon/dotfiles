@@ -6,6 +6,8 @@
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     excludesfile = ~/.gitignore
 [alias]
+    ad = add
+    ada = add -A
     cl = clone
     cm = commit
     cmm = commit -m
@@ -14,8 +16,13 @@
     br = branch
     st = status
     di = diff
+    dic = diff --cached
     f = fetch
     fo = fetch origin
+    lg = log
+    lgp = log -p
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%C(cyan)\\ [%cn]" --decorate --numstat
     pl = pull
     plo = pull origin
     plr = pull --rebase

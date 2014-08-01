@@ -30,3 +30,4 @@
     pso = push origin
     psf = push --force
     rb = rebase
+    root = rev-parse --show-toplevel

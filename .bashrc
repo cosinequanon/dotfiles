@@ -39,5 +39,7 @@ mkdirdate() {
     mkdir ${DIR_NAME}
     cd ${DIR_NAME}
 }
+
 mkdircd() { mkdir $1 && cd $1; }
 
+gr() { cd $(git root); }

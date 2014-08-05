@@ -1,3 +1,6 @@
+" Package managers are good idea I think
+execute pathogen#infect()
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -12,6 +15,7 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
+let g:maplocalleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
@@ -291,3 +295,15 @@ vnoremap GG G$
 " have this enabled on *.R files
 " but we leave it for now
 iab ;; %.%
+
+" Don't let vimr transform _ to <-
+let vimrplugin_assign = 0
+
+" UltiSnippets shortcuts
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+" NERD tree
+command NE NERDTree

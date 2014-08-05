@@ -30,6 +30,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# access the dotfiles dir
+alias cddf="cd ~/repos/dotfiles"
+
 # ls
 alias l="ls -l"
 alias la="ls -la"

@@ -79,3 +79,4 @@ alias pprint="python -m json.tool"
 alias hotp="htop"
 alias ssh-x='ssh -c arcfour,blowfish-cbc -XC'
 alias pigzb='pigz --best '
+alias jobkill="jobs -p | xargs kill"

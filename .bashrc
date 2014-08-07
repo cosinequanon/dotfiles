@@ -40,6 +40,24 @@ mkdirdate() {
     cd ${DIR_NAME}
 }
 
-mkdircd() { mkdir $1 && cd $1; }
+mkdircd() {
+    DIR_NAME="$1"
+    mkdir -p ${DIR_NAME}
+    cd ${DIR_NAME}
+}
 
 gr() { cd $(git root); }
+
+# move the last downloaded file somewhere
+mvlastdl() {
+    SEARCH_DIR="${HOME}/Downloads"
+    MV_DIR=${1:-.}
+    LAST_FILE="$(ls -t ${SEARCH_DIR} | head -1)"
+    if [[ ${LAST_FILE} == *download ]]; then
+        echo "File is still downloading, wait a bit"
+        exit
+    else
+        echo ${SEARCH_DIR}/${LAST_FILE} ${MV_DIR}
+        mv -- "${SEARCH_DIR}/${LAST_FILE}" ${MV_DIR}
+    fi
+}

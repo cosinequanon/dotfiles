@@ -14,7 +14,7 @@
     cm = commit
     cmm = commit -m
     cma = commit --amend
-    cmaa = git commit --amend -C HEAD
+    cmaa = commit --amend -C HEAD
     co = checkout
     br = branch
     st = status

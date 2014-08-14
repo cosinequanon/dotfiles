@@ -294,7 +294,7 @@ vnoremap GG G$
 " shortcut for R stuffs, might be better to only
 " have this enabled on *.R files
 " but we leave it for now
-iab ;; %.%
+iab ;; %>%
 
 " Don't let vimr transform _ to <-
 let vimrplugin_assign = 0

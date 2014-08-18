@@ -61,3 +61,12 @@ mvlastdl() {
         mv -- "${SEARCH_DIR}/${LAST_FILE}" ${MV_DIR}
     fi
 }
+
+
+# platform specific things
+UNAME=$(uname)
+LINUX="Linux"
+
+if [ ${UNAME} = ${LINUX} ]; then
+    xmodmap ~/.speedswapper
+fi

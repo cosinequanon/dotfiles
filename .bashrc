@@ -62,6 +62,12 @@ mvlastdl() {
     fi
 }
 
+cdlm() {
+    LAST_MOD_DIR=$(ls -rd */ 2> /dev/null | head -1)
+    cd ${LAST_MOD_DIR:-.}
+}
+
+
 
 # platform specific things
 UNAME=$(uname)

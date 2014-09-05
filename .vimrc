@@ -290,7 +290,7 @@ set visualbell
 " kind of like how gg goes the the top and begining of a line
 nnoremap GG G$
 vnoremap GG G$
-"
+
 " shortcuts for R
 autocmd BufEnter *.R iab ;; %>%
 autocmd BufEnter *.R iab -- <-
@@ -306,3 +306,11 @@ let g:UltiSnipsEditSplit="vertical"
 
 " NERD tree
 command NE NERDTree
+
+" slimux plugin
+map <leader>l :SlimuxREPLSendLine<CR>
+vmap <leader>s :SlimuxREPLSendSelection<CR>
+" source paragraph keeping cursor in place
+map <leader>p ma{v}<leader>s`a
+" source entire file keeping cursor in place
+map <leader>a maggvG$<leader>s`a

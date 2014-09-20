@@ -291,6 +291,10 @@ set visualbell
 nnoremap GG G$
 vnoremap GG G$
 
+" make it easier to redo macros
+" also shadows Ex mode which I never use
+nmap Q @@
+
 " shortcuts for R
 autocmd BufEnter *.R iab ;; %>%
 autocmd BufEnter *.R iab -- <-

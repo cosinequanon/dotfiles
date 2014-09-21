@@ -311,10 +311,16 @@ let g:UltiSnipsEditSplit="vertical"
 " NERD tree
 command NE NERDTree
 
-" slimux plugin
+" Slimux Plugin
+" send line
 map <leader>l :SlimuxREPLSendLine<CR>
+" send line and move down
+map <leader>d :SlimuxREPLSendLine<CR>j
+" send selection
 vmap <leader>s :SlimuxREPLSendSelection<CR>
 " source paragraph keeping cursor in place
-map <leader>p ma{v}<leader>s`a
+map <leader>f ma{v}<leader>s`a
 " source entire file keeping cursor in place
 map <leader>a maggvG$<leader>s`a
+" reconfigure pane to send text to
+map <leader>r :SlimuxREPLConfigure<CR>

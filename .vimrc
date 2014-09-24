@@ -295,6 +295,12 @@ vnoremap GG G$
 " also shadows Ex mode which I never use
 nmap Q @@
 
+" Folding settings
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
+
 " shortcuts for R
 autocmd BufEnter *.R iab ;; %>%
 autocmd BufEnter *.R iab -- <-

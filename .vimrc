@@ -282,6 +282,18 @@ vnoremap GG G$
 " also shadows Ex mode which I never use
 nmap Q @@
 
+" Add 80 width color column
+function! g:ToggleColorColumn()
+  if &colorcolumn != ''
+    setlocal colorcolumn&
+  else
+    setlocal colorcolumn=80
+  endif
+endfunction
+ 
+nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
+
+
 " Folding settings
 set foldmethod=indent
 set foldnestmax=10

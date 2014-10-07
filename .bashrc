@@ -33,6 +33,12 @@ if [[ -f ~/.git-completion.bash && -f ~/.git-prompt.sh ]]; then
     export PS1='[\w$(__git_ps1 "|%s")]\$ '
 fi
 
+# Renv
+if [[ -d $HOME/.Renv ]]; then
+    export PATH="$HOME/.Renv/bin:$PATH"
+    eval "$(Renv init -)"
+fi
+
 # functions
 mkdirdate() { 
     DIR_NAME=$(date +'%Y-%m-%d')-"$1"

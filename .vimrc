@@ -293,12 +293,14 @@ endfunction
  
 nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
 
-
 " Folding settings
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+
+ " Switch arguement order
+ nnoremap <leader>sw "qdt,dwep"qp
 
 " make use of Xterm "bracketed paste mode"
 " http://www.xfree86.org/current/ctlseqs.html#Bracketed%20Paste%20Mode

@@ -15,7 +15,7 @@ for full_file in $(find ${script_dir} -type f -name ".*"); do
     file_name=$(echo $full_file | awk -F "/" '{print $NF}')
     echo "Copying $full_file to ~/$file_name"
     rm -f ~/${file_name}
-    cp ${full_file} ~/${file_name}
+    cp -r ${full_file} ~/${file_name}
 done
 
 cd - > /dev/null

@@ -358,3 +358,7 @@ map <leader>f ma{v}<leader>s`a
 map <leader>a maggvG$<leader>s`a
 " reconfigure pane to send text to
 map <leader>r :SlimuxREPLConfigure<CR>
+
+if !empty(glob("~/vimrc_glob"))
+  so ~/.vimrc_custom
+endif

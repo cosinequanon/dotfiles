@@ -133,8 +133,8 @@ prompt() {
             fi
 
             # Exit if not inside a Mercurial tree
-            local branch
-            if ! branch=$(hg branch 2>/dev/null) ; then
+            local book
+            if ! book=$(hg book 2>/dev/null | grep '*' | awk '{print $2}') ; then
                 return 1
             fi
 
@@ -163,7 +163,7 @@ prompt() {
 
             # Print the status in brackets with an hg: prefix
             local IFS=
-            printf '(hg:%s%s)' "${branch:-unknown}" "${state[*]}"
+            printf '(hg:%s%s)' "${book:-unknown}" "${state[*]}"
             ;;
 
         # Subversion prompt function

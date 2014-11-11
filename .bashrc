@@ -30,7 +30,13 @@ fi
 if [[ -f ~/.git-completion.bash && -f ~/.git-prompt.sh ]]; then
     source ~/.git-completion.bash
     source ~/.git-prompt.sh
-    export PS1='[\w$(__git_ps1 "|%s")]\$ '
+fi
+
+# Prompt
+if [[ -f ~/.scm_prompt ]]; then
+    source ~/.scm_prompt
+else
+    export PS1='[\w]\$ '
 fi
 
 # Renv

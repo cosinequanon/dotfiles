@@ -85,6 +85,6 @@ cdlm() {
 UNAME=$(uname)
 LINUX="Linux"
 
-if [ ${UNAME} = ${LINUX} ]; then
+if [[ ${UNAME} = ${LINUX} && $(hash xmodmap 2> /dev/null) ]]; then
     xmodmap ~/.speedswapper
 fi

@@ -134,8 +134,10 @@ prompt() {
 
             # Exit if not inside a Mercurial tree
             local book
-            if ! book=$(hg book 2>/dev/null | grep '*' | awk '{print $2}') ; then
+            if ! _=$(hg book 2>/dev/null); then
                 return 1
+            else
+                book=$(hg book 2>/dev/null | grep '*' | awk '{print $2}')
             fi
 
             # Start collecting working copy state flags

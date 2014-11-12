@@ -119,9 +119,17 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
+" 1 tab == 4 spaces for all files
 set shiftwidth=4
 set tabstop=4
+
+" Javascript likes 2 spaces
+autocmd BufEnter *.js set shiftwidth=2
+autocmd BufEnter *.js set tabstop=2
+
+" Php likes 2 spaces
+autocmd BufEnter *.php set shiftwidth=2
+autocmd BufEnter *.php set tabstop=2
 
 " Linebreak on 500 characters
 set lbr

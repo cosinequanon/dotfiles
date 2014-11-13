@@ -59,11 +59,12 @@ alias ebp="$EDITOR ~/.bash_profile"
 alias sbp="source ~/.bash_profile"
 alias ev="$EDITOR ~/.vimrc"
 
-# git
-alias g="git"
+# scm
+alias g="git "
+alias h="hg "
 
 # vim
-alias v="vim"
+alias v="vim "
 
 # python
 alias vw="source /usr/local/bin/virtualenvwrapper.sh"

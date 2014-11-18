@@ -74,10 +74,15 @@ alias pipup="pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
 # make aliases work with sudo
 alias sudo='sudo '
 
+# compression
+if command -v pigz > /dev/null 2>&1 ; then
+    alias tar='tar --use-compress-program=pigz '
+    alias pigzb='pigz --best '
+fi
+
 # etc
 alias histg="history | egrep"
 alias pprint="python -m json.tool"
 alias hotp="htop"
 alias ssh-x='ssh -c arcfour,blowfish-cbc -XC'
-alias pigzb='pigz --best '
 alias jobkill="jobs -p | xargs kill"

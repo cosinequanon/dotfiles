@@ -1,0 +1,10 @@
+[ui]
+username = Sergey Goder <sgoder@fb.com>
+editor = vim
+
+[alias]
+ad = add
+bk = book
+cm = commit
+cma = commit --amend
+cmaa = amend

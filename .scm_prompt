@@ -88,41 +88,9 @@ prompt() {
             fi
             branch=${branch##*/}
 
-            # Safely read status with -z --porcelain
-            local line
-            local -i ready=0 modified=0 untracked=0
-            while IFS= read -r -d '' line ; do
-                if [[ $line == [MADRCT]* ]] ; then
-                    ready=1
-                fi
-                if [[ $line == ?[MADRCT]* ]] ; then
-                    modified=1
-                fi
-                if [[ $line == '??'* ]] ; then
-                    untracked=1
-                fi
-            done < <(git status -z --porcelain 2>/dev/null)
-
-            # Build state array from status output flags
-            local -a state
-            if ((ready)) ; then
-                state=("${state[@]}" '+')
-            fi
-            if ((modified)) ; then
-                state=("${state[@]}" '!')
-            fi
-            if ((untracked)) ; then
-                state=("${state[@]}" '?')
-            fi
-
-            # Add another indicator if we have stashed changes
-            if git rev-parse --verify refs/stash >/dev/null 2>&1 ; then
-                state=("${state[@]}" '^')
-            fi
-
             # Print the status in brackets with a git: prefix
             local IFS=
-            printf '(git:%s%s)' "${branch:-unknown}" "${state[*]}"
+            printf '(git:%s%s)' "${branch:-unknown}"
             ;;
 
         # Mercurial prompt function
@@ -140,32 +108,9 @@ prompt() {
                 book=$(hg book 2>/dev/null | grep '*' | awk '{print $2}')
             fi
 
-            # Start collecting working copy state flags
-            local -a state
-
-            # Safely read status with -0
-            local line
-            local -i modified=0 untracked=0
-            while IFS= read -r -d '' line ; do
-                if [[ $line == '?'* ]] ; then
-                    untracked=1
-                else
-                    modified=1
-                fi
-            done < <(hg status -0 2>/dev/null)
-
-            # Build state array from status output flags
-            local -a state
-            if ((modified)) ; then
-                state=("${state[@]}" '!')
-            fi
-            if ((untracked)) ; then
-                state=("${state[@]}" '?')
-            fi
-
             # Print the status in brackets with an hg: prefix
             local IFS=
-            printf '(hg:%s%s)' "${book:-unknown}" "${state[*]}"
+            printf '(hg:%s%s)' "${book:-unknown}"
             ;;
 
         # Subversion prompt function

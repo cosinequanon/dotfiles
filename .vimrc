@@ -307,8 +307,11 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=1
 
- " Switch arguement order
- nnoremap <leader>sw "qdt,dwep"qp
+" Switch arguement order
+nnoremap <leader>sw "qdt,dwep"qp
+
+" Make a markdown title
+nnoremap <leader>md yypVr#
 
 " make use of Xterm "bracketed paste mode"
 " http://www.xfree86.org/current/ctlseqs.html#Bracketed%20Paste%20Mode

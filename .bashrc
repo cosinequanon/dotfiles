@@ -58,9 +58,15 @@ mkdircd() {
     cd ${DIR_NAME}
 }
 
-gr() { cd $(git root); }
+gr() {
+    ROOT_DIR=$(git root)
+    cd ${ROOT_DIR:-.}
+}
 
-hr() { cd $(hg root); }
+hr() {
+    ROOT_DIR=$(hg root)
+    cd ${ROOT_DIR:-.}
+}
 
 # move the last downloaded file somewhere
 mvlastdl() {

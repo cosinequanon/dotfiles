@@ -26,12 +26,6 @@ if [[ -f ~/.bash_custom ]]; then
     source ~/.bash_custom
 fi
 
-# git completion
-if [[ -f ~/.git-completion.bash && -f ~/.git-prompt.sh ]]; then
-    source ~/.git-completion.bash
-    source ~/.git-prompt.sh
-fi
-
 # Prompt
 if [[ -f ~/.scm_prompt ]]; then
     source ~/.scm_prompt

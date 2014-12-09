@@ -5,7 +5,6 @@ LINUX="Linux"
 
 if [ ${UNAME} = ${MAC} ]; then
     # brew
-    alias br="brew"
     alias brs="brew search"
     alias bri="brew install"
     alias brup="brew update && brew upgrade"

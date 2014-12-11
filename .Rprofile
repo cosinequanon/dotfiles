@@ -1,6 +1,7 @@
 options(repos=structure(c(CRAN="http://cran.rstudio.com/")))
 
 up <- function() update.packages(ask = FALSE)
+q <- function() quit(save = 'no')
 
 # Lines added by the Vim-R-plugin command :RpluginConfig (2014-Jul-22 09:42):
 if (interactive()){

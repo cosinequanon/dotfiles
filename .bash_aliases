@@ -85,3 +85,4 @@ alias pprint="python -m json.tool"
 alias hotp="htop"
 alias ssh-x='ssh -c arcfour,blowfish-cbc -XC'
 alias jobkill="jobs -p | xargs kill"
+alias caly="cal -y"

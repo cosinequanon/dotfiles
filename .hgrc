@@ -7,4 +7,5 @@ ad = add
 bk = book
 cm = commit
 cma = commit --amend
-cmaa = amend
+am = amend
+ame = amend

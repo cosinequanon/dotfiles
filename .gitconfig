@@ -17,7 +17,8 @@
     cm = commit
     cmm = commit -m
     cma = commit --amend
-    cmaa = commit --amend --no-edit
+    amend = commit --amend --no-edit
+    ame = commit --amend --no-edit
     co = checkout
     br = branch
     st = status

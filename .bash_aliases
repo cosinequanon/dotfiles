@@ -75,7 +75,6 @@ alias sudo='sudo '
 
 # compression
 if command -v pigz > /dev/null 2>&1 ; then
-    alias tar='tar --use-compress-program=pigz '
     alias pigzb='pigz --best '
 fi
 

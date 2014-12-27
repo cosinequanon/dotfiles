@@ -15,6 +15,7 @@ bind -m vi-insert "\C-e.":end-of-line
 # set defaults
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
+export LESS="-R"
 
 # aliases
 if [[ -f ~/.bash_aliases ]]; then
@@ -80,6 +81,18 @@ cdlm() {
     LAST_MOD_DIR=$(ls -rd */ 2> /dev/null | head -1)
     cd ${LAST_MOD_DIR:-.}
 }
+
+color_cat() {
+    if $(command -v highlight > /dev/null 2>&1); then
+        highlight -O ansi "$1"
+    elif $(command -v pygmentize > /dev/null 2>&1); then
+        pygmentize -g "$1"
+    else
+        cat "$1"
+    fi
+}
+# override any ccat functions in the path
+alias ccat='color_cat '
 
 # platform specific things
 UNAME=$(uname)

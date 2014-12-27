@@ -1,3 +1,6 @@
+# General Bash
+##############
+
 # history
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
@@ -15,55 +18,61 @@ bind -m vi-insert "\C-e.":end-of-line
 # set defaults
 export EDITOR="/usr/bin/vim"
 export PAGER="/usr/bin/less"
-export LESS="-R"
+export LESS="-R" # for color
 
 # aliases
 if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
-# custom for machine
+# custom for machine. this useful for things that are specific to work
 if [[ -f ~/.bash_custom ]]; then
     source ~/.bash_custom
 fi
 
-# Prompt
+# prompt for git/hg because that is what I use
 if [[ -f ~/.scm_prompt ]]; then
     source ~/.scm_prompt
 else
     export PS1='[\w]\$ '
 fi
 
-# Renv
+# Renv because I love R
 if [[ -d $HOME/.Renv ]]; then
     export PATH="$HOME/.Renv/bin:$PATH"
     eval "$(Renv init -)"
 fi
 
-# functions
+# Functions
+###########
+
+# make a directory appended with the date
 mkdirdate() { 
     DIR_NAME=$(date +'%Y-%m-%d')-"$1"
     mkdir ${DIR_NAME}
     cd ${DIR_NAME}
 }
 
+# make a directory and cd into it
 mkdircd() {
     DIR_NAME="$1"
     mkdir -p ${DIR_NAME}
     cd ${DIR_NAME}
 }
 
+# cd into the git root or noop
 gr() {
     ROOT_DIR=$(git root)
     cd ${ROOT_DIR:-.}
 }
 
+# cd into the hg root or noop
 hr() {
     ROOT_DIR=$(hg root)
     cd ${ROOT_DIR:-.}
 }
 
-# move the last downloaded file somewhere
+# move the last downloaded file to a destination or the current dir
 mvlastdl() {
     SEARCH_DIR="${HOME}/Downloads"
     MV_DIR=${1:-.}
@@ -77,11 +86,13 @@ mvlastdl() {
     fi
 }
 
+# change the directory to the last modified one
 cdlm() {
     LAST_MOD_DIR=$(ls -rd */ 2> /dev/null | head -1)
     cd ${LAST_MOD_DIR:-.}
 }
 
+# try a couple third-party packages for printing source files with color
 color_cat() {
     if $(command -v highlight > /dev/null 2>&1); then
         highlight -O ansi "$1"
@@ -94,10 +105,13 @@ color_cat() {
 # override any ccat functions in the path
 alias ccat='color_cat '
 
-# platform specific things
+# Platform Specific
+###################
+
 UNAME=$(uname)
 LINUX="Linux"
 
+# if on linux, switch caps with escape
 if [[ ${UNAME} = ${LINUX} && $(command -v xmodmap > /dev/null 2>&1) ]]; then
     xmodmap ~/.speedswapper
 fi

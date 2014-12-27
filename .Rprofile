@@ -1,7 +1,11 @@
 options(repos=structure(c(CRAN="http://cran.rstudio.com/")))
 
-up <- function() update.packages(ask = FALSE)
-q <- function() quit(save = 'no')
+up <- function () update.packages(ask = FALSE)
+q <- function () quit(save = 'no')
+
+lf <- function (dir) list.files(dir)
+# I usually keep my files in a data dir
+lfd <- function () list.files('data')
 
 # Lines added by the Vim-R-plugin command :RpluginConfig (2014-Jul-22 09:42):
 if (interactive()){

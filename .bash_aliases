@@ -34,13 +34,14 @@ alias cddf="cd ~/repos/dotfiles"
 
 # ls
 alias l="ls -l"
-alias la="ls -la"
+alias la="ls -a"
 alias lh="ls -lh"
-alias ll="ls -l"
+alias ll="ls -la"
 alias larth="ls -larth"
 
 # grep
 alias grep="grep --color=auto"
+alias grep="igrep -i --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
@@ -56,6 +57,8 @@ alias eba="$EDITOR ~/.bash_aliases"
 alias sba="source ~/.bash_aliases"
 alias ebp="$EDITOR ~/.bash_profile"
 alias sbp="source ~/.bash_profile"
+alias ebc="$EDITOR ~/.bash_custom"
+alias sbc="source ~/.bash_custom"
 alias ev="$EDITOR ~/.vimrc"
 
 # scm
@@ -66,9 +69,16 @@ alias h="hg "
 alias v="vim "
 
 # python
-alias vw="source /usr/local/bin/virtualenvwrapper.sh"
-alias vwd="source /usr/local/bin/virtualenvwrapper.sh && workon dev"
-alias pipup="pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
+if $(command -v /usr/local/bin/virtualenvwrapper.sh > /dev/null 2>&1); then
+    alias vw="source /usr/local/bin/virtualenvwrapper.sh"
+    alias vwd="source /usr/local/bin/virtualenvwrapper.sh && workon dev"
+fi
+
+if $(command -v pip > /dev/null 2>&1); then 
+    alias pipup="pip freeze | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U"
+    alias pipi="pip instiall "
+    alias pips="pip search"
+fi
 
 # make aliases work with sudo
 alias sudo='sudo '
@@ -82,6 +92,6 @@ fi
 alias histg="history | egrep"
 alias pprint="python -m json.tool"
 alias hotp="htop"
-alias ssh-x='ssh -c arcfour,blowfish-cbc -XC'
+alias sshx='ssh -c arcfour,blowfish-cbc -XC'
 alias jobkill="jobs -p | xargs kill"
 alias caly="cal -y"

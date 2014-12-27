@@ -62,7 +62,7 @@ alias sbc="source ~/.bash_custom"
 alias ev="$EDITOR ~/.vimrc"
 
 # reload state
-alias es="exec $SHELL"
+alias es='echo "executing shell"; exec $SHELL'
 
 # scm
 alias g="git "

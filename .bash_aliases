@@ -61,6 +61,9 @@ alias ebc="$EDITOR ~/.bash_custom"
 alias sbc="source ~/.bash_custom"
 alias ev="$EDITOR ~/.vimrc"
 
+# reload state
+alias es="exec $SHELL"
+
 # scm
 alias g="git "
 alias h="hg "

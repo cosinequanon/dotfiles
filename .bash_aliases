@@ -41,7 +41,7 @@ alias larth="ls -larth"
 
 # grep
 alias grep="grep --color=auto"
-alias grep="igrep -i --color=auto"
+alias igrep="grep -i --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 

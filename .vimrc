@@ -124,8 +124,12 @@ set shiftwidth=4
 set tabstop=4
 
 " Files that like 2 spaces
-autocmd FileType js,css,php autocmd BufEnter *.js set shiftwidth=2
-autocmd Filetype js,css,php autocmd BufEnter *.js set tabstop=2
+autocmd FileType js autocmd BufEnter *.js set shiftwidth=2
+autocmd Filetype js autocmd BufEnter *.js set tabstop=2
+autocmd FileType css autocmd BufEnter *.css set shiftwidth=2
+autocmd Filetype css autocmd BufEnter *.css set tabstop=2
+autocmd FileType php autocmd BufEnter *.php set shiftwidth=2
+autocmd Filetype php autocmd BufEnter *.php set tabstop=2
 
 " Linebreak on 500 characters
 set lbr

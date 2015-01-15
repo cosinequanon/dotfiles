@@ -105,6 +105,18 @@ color_cat() {
 # override any ccat functions in the path
 alias ccat='color_cat '
 
+# Prevents me from accidentally doing `pkill .`
+# which is very, very annoying
+pkill() {
+    for i in $@; do :; done # get last argument
+    if [[ "$i" == "." ]]; then
+        echo "I'm sorry, Dave. I'm afraid I can't do that."
+    else
+        pkill "$@"
+    fi
+}
+
+
 # Platform Specific
 ###################
 

@@ -95,9 +95,9 @@ cdlm() {
 # try a couple third-party packages for printing source files with color
 color_cat() {
     if $(command -v highlight > /dev/null 2>&1); then
-        highlight -O ansi "$1"
+        highlight -O ansi "$1" 2> /dev/null || cat "$1"
     elif $(command -v pygmentize > /dev/null 2>&1); then
-        pygmentize -g "$1"
+        pygmentize -g "$1" 2> /dev/null || cat "$1"
     else
         cat "$1"
     fi

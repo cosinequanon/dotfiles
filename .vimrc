@@ -78,13 +78,9 @@ set tm=500
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-
-try
-    colorscheme ron
-catch
-endtry
-
+let g:solarized_termcolors=256
 set background=dark
+colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")

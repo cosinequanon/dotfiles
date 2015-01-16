@@ -47,3 +47,14 @@ list <- structure(NA,class="result")
    }
    x
 }
+
+setwidth <- function(scale_width = .95) {
+    term_width <- Sys.getenv("COLUMNS")
+    if (term_width == "") {
+        print("COLUMNS is not set in the env, using 80")
+        options(width = 80*scale_width)
+    } else {
+        options(width = as.integer(term_width)*scale_width)
+    }
+}
+setwidth()

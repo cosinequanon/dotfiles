@@ -304,7 +304,7 @@ set nofoldenable
 set foldlevel=1
 
 " Switch arguement order
-nnoremap <leader>sw "qdt,dwep"qp
+nnoremap <leader>sw "qdt,dwep"qpbbb
 
 " Make a markdown title
 nnoremap <leader>md yypVr#

@@ -1,4 +1,5 @@
 options(repos=structure(c(CRAN="http://cran.rstudio.com/")))
+options(max.print = 1000)
 
 up <- function () update.packages(ask = FALSE)
 q <- function () quit(save = 'no')

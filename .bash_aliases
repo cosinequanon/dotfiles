@@ -51,14 +51,10 @@ alias td="tmux detach"
 alias tn="tmux new"
 
 # edit stuff
-alias eb="$EDITOR ~/.bashrc"
-alias sb="source ~/.bashrc"
-alias eba="$EDITOR ~/.bash_aliases"
-alias sba="source ~/.bash_aliases"
-alias ebp="$EDITOR ~/.bash_profile"
-alias sbp="source ~/.bash_profile"
-alias ebc="$EDITOR ~/.bash_custom"
-alias sbc="source ~/.bash_custom"
+alias eb="$EDITOR ~/.bashrc; source ~/.bashrc"
+alias eba="$EDITOR ~/.bash_aliases; source ~/.bash_aliases"
+alias ebp="$EDITOR ~/.bash_profile; source ~/.bash_profile"
+alias ebc="$EDITOR ~/.bash_custom; source ~/.bash_custom"
 alias ev="$EDITOR ~/.vimrc"
 
 # reload state

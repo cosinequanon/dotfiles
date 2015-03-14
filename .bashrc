@@ -48,6 +48,10 @@ fi
 
 # make a directory appended with the date
 mkdirdate() { 
+    if [ -z "$1" ]; then
+        echo "Please specify a directory name"
+        return
+    fi
     DIR_NAME=$(date +'%Y-%m-%d')-"$1"
     mkdir ${DIR_NAME}
     cd ${DIR_NAME}

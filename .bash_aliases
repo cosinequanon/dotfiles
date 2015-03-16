@@ -46,9 +46,9 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 
 # tmux
-alias ta="tmux attach"
+alias ta="tmux -u attach"
 alias td="tmux detach"
-alias tn="tmux new"
+alias tn="tmux -u new"
 
 # edit stuff
 alias eb="$EDITOR ~/.bashrc; source ~/.bashrc"

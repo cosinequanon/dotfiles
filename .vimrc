@@ -339,7 +339,6 @@ autocmd BufEnter *.py inoremap # X<BS>#
 
 " shortcuts for R
 autocmd BufEnter *.R iab ;; %>%
-autocmd BufEnter *.R iab -- <-
 
 " Don't let vimr transform _ to <-
 let vimrplugin_assign = 0

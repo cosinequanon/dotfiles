@@ -17,6 +17,7 @@ bind -m vi-insert "\C-e.":end-of-line
 
 # set defaults
 export EDITOR="/usr/bin/vim"
+export VISUAL="/usr/bin/vim"
 export PAGER="/usr/bin/less"
 export LESS="-R" # for color
 

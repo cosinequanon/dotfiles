@@ -333,10 +333,6 @@ if &term =~ 'screen' || $term =~ 'xterm'
   cnoremap <Esc>[201~ <nop>
 endif
 
-" HACK because adding a comment in insert mode pushes the # to the
-" begining of the line for some reason
-autocmd BufEnter *.py inoremap # X<BS>#
-
 " shortcuts for R
 autocmd BufEnter *.R iab ;; %>%
 

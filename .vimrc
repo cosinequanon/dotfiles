@@ -346,7 +346,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " NERD tree
-command NE NERDTree
+command! NE NERDTree
 
 " Slimux Plugin
 " send line

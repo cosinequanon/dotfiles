@@ -201,16 +201,6 @@ autocmd BufReadPost *
 set viminfo^=%
 
 
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -230,7 +220,7 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+" Delete trailing white space on save
 func! DeleteTrailingWS()
   exe "normal mz"
   %s/\s\+$//ge
@@ -262,9 +252,6 @@ nnoremap <leader>x :x<return>
 nnoremap <leader>nn :set number!<return>
 nnoremap <leader>mn :set relativenumber!<return>
 
-" switch a word's case after writing it
-imap <c-u> <esc>viw~ea
-
 " make Y, V consistent with D, C, etc.
 nnoremap Y y$
 nnoremap V v$
@@ -279,7 +266,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 set visualbell
 
 " go to the end of the file and line
-" kind of like how gg goes the the top and begining of a line
+" just like how gg goes the the top and begining of a line
 nnoremap GG G$
 vnoremap GG G$
 
@@ -306,6 +293,9 @@ set foldlevel=1
 
 " Switch arguement order
 nnoremap <leader>sw "qdt,dwep"qpbbb
+
+" Refresh syntax
+nnoremap <leader>ss :syntax sync fromstart<CR>
 
 " Make a markdown title
 nnoremap <leader>md yypVr#

@@ -84,7 +84,6 @@ mvlastdl() {
     LAST_FILE="$(ls -t ${SEARCH_DIR} | head -1)"
     if [[ ${LAST_FILE} == *download ]]; then
         echo "File is still downloading, wait a bit"
-        exit
     else
         echo "Moving" ${SEARCH_DIR}/${LAST_FILE} "to" ${MV_DIR}
         mv -- "${SEARCH_DIR}/${LAST_FILE}" ${MV_DIR}

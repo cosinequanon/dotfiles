@@ -270,6 +270,10 @@ set visualbell
 nnoremap GG G$
 vnoremap GG G$
 
+" keep the screen centered when searching
+nnoremap N Nzz
+nnoremap n nzz
+
 " make it easier to redo macros
 " also shadows Ex mode which I never use
 nmap Q @@

@@ -287,7 +287,7 @@ function! g:ToggleColorColumn()
   endif
 endfunction
  
-nnoremap <silent> <leader>cc :call g:ToggleColorColumn()<CR>
+nnoremap <silent> <leader>co :call g:ToggleColorColumn()<CR>
 
 " Folding settings
 set foldmethod=indent

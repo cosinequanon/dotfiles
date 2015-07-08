@@ -94,4 +94,5 @@ alias hotp="htop"
 alias sshx='ssh -c arcfour,blowfish-cbc -XC'
 alias jobkill="jobs -p | xargs kill"
 alias caly="cal -y"
+alias pingg="ping google.com"
 alias ?="man"

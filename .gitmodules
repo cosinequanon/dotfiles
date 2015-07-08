@@ -3,7 +3,7 @@
 	url = https://github.com/vim-scripts/UltiSnips.git
 [submodule ".vim/bundle/julia-vim"]
 	path = .vim/bundle/julia-vim
-	url = git://github.com/JuliaLang/julia-vim.git
+	url = https://github.com/JuliaLang/julia-vim.git
 [submodule ".vim/bundle/pyflakes-vim"]
 	path = .vim/bundle/pyflakes-vim
 	url = https://github.com/kevinw/pyflakes-vim
@@ -15,7 +15,7 @@
 	url = https://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
+	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
@@ -24,7 +24,7 @@
 	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".vim/bundle/vim-speeddating"]
 	path = .vim/bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating.git
@@ -37,6 +37,3 @@
 [submodule ".vim/bundle/vim-commentary"]
 	path = .vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "vim-colors-solarized"]
-	path = vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git

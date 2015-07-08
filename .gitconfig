@@ -42,4 +42,5 @@
     pso = push origin
     psf = push --force
     rb = rebase
+    sm = submodule
     root = rev-parse --show-toplevel

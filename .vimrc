@@ -288,6 +288,7 @@ function! g:ToggleColorColumn()
 endfunction
  
 nnoremap <silent> <leader>co :call g:ToggleColorColumn()<CR>
+call g:ToggleColorColumn()
 
 " Folding settings
 set foldmethod=indent
@@ -303,6 +304,9 @@ nnoremap <leader>ss :syntax sync fromstart<CR>
 
 " Make a markdown title
 nnoremap <leader>md yypVr#
+
+" Make a comment with #
+nnoremap <leader>ko 80i-<Esc>^R#
 
 " make use of Xterm "bracketed paste mode"
 " http://www.xfree86.org/current/ctlseqs.html#Bracketed%20Paste%20Mode

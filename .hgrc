@@ -9,3 +9,6 @@ cm = commit
 cma = commit --amend
 am = amend
 ame = amend
+rb = rebase
+sh = shelve
+unsh = unshelve

@@ -12,3 +12,4 @@ ame = amend
 rb = rebase
 sh = shelve
 unsh = unshelve
+ll1 = status --change tip

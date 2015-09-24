@@ -308,6 +308,18 @@ nnoremap <leader>md yypVr#
 " Make a comment with #
 nnoremap <leader>ko 80i-<Esc>^R#
 
+" This first mapping is so hacky it hurts, but it also hurts so good.
+" Open up functions arguments
+" group_by(id) %>%
+" becomes...
+" group_by(
+"   id,
+"   <CURSOR HERE>
+" ) %>%
+nnoremap <leader>do ^f(a)<CR><ESC><<i<TAB><TAB><ESC>A <ESC>F)i<CR><ESC><<>>kk$xjA,<CR>
+" Close function args (sort of the inverse of above but not really)
+nnoremap <leader>dc kJxJ^
+
 " make use of Xterm "bracketed paste mode"
 " http://www.xfree86.org/current/ctlseqs.html#Bracketed%20Paste%20Mode
 " http://stackoverflow.com/questions/5585129

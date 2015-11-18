@@ -49,7 +49,7 @@ list <- structure(NA,class="result")
    x
 }
 
-setwidth <- function(width = NULL, scale_width = .95) {
+(setwidth <- function(width = NULL, scale_width = .95) {
     term_width <- Sys.getenv("COLUMNS")
     if (term_width == "") {
         if (!is.null(width)) {
@@ -60,5 +60,4 @@ setwidth <- function(width = NULL, scale_width = .95) {
     } else {
         options(width = as.integer(term_width)*scale_width)
     }
-}
-setwidth()
+})()
